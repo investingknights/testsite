@@ -4,6 +4,7 @@ title:  "Test piloting the personal finance blog"
 date:   2018-03-13
 excerpt: "This is a short description of the dummy post"
 image: "/images/pic02.jpg"
+comments: true
 ---
 
 ## How to Use This Theme
