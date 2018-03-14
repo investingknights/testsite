@@ -4,7 +4,7 @@ bio:                'War of Money'
 description:        "War of Money"
 locale:             en_US
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "https://www.investingknights.com/" # the base hostname & protocol for your site
 
 defaults:
 - scope:
