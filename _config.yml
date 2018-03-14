@@ -1,7 +1,7 @@
 # Site
 title:              Investing Knights
-bio:                'War of Money'
-description:        "War of Money"
+bio:                'Join the War of Money'
+description:        "Join the War of Money"
 locale:             en_US
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
