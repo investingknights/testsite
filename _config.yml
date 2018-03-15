@@ -31,7 +31,8 @@ sass:
   style:            compressed
 
 # Comments
-disqus_shortname:   investingknights
+disqus:
+    shortname: investingknights
 
 # Social
 analytics-id:       "UA-115738067-1"
