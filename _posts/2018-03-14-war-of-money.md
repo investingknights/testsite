@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What is War of Money"
-date:   2018-03-15
+date:   2018-03-14
 excerpt: "It’s always been war of money since the beginning of capitalistic society."
 image: "/images/war_of_money.jpg"
 comments: true
