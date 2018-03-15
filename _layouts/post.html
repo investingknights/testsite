@@ -44,6 +44,21 @@
       			<p>{{content}}</p>
       		</section>
 
+					<div class="list-group">
+						<h3>Other Posts You May Like</h3>	
+						{% for post in site.posts limit:3 %}
+							{% if post.url != page.url %}
+							<article>
+									<header>
+										<span class="date">{{ post.date | date_to_string }}</span>
+										<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+									</header>
+									<p>{{ post.excerpt }}</p>
+							</article>
+							{% endif %}
+						{% endfor %}
+					</div>
+
           <div class="comments-wrapper">
             {% if site.disqus.shortname %}
               {% include disqus_comments.html %}
