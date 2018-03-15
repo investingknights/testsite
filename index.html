@@ -22,94 +22,89 @@ sitemap:
 	</head>
 	<body class="is-loading">
 
-		<!-- Wrapper -->
+			<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
 
 				<!-- Intro -->
-					<div id="intro">
-            			<h1>{{site.title}}</h1>
-						<h2>Join the War of Money</h2>
-						<!--- <p>This blog is maintained by Savage Investors</p> -->
-						<ul class="actions">
-							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+				<div id="intro">
+					<h1>{{site.title}}</h1>
+					<h2>Join the War of Money</h2>
+					<!--- <p>This blog is maintained by Savage Investors</p> -->
+					<ul class="actions">
+						<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+					</ul>
+				</div>
 
 				<!-- Header -->
-					<header id="header">
-						<a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
-					</header>
+				<header id="header">
+					<a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
+				</header>
 
 				<!-- Nav -->
-					<nav id="nav">
-
-            {% include nav.html %}
-
-						<ul class="icons">
-              <li><a href="https://twitter.com/{{site.twitter}}" class="icon fa-twitter" rel="nofollow"><span class="label">Twitter</span></a></li>
-              <li><a href="https://facebook.com/{{site.facebook}}" class="icon fa-facebook" rel="nofollow"><span class="label">Facebook</span></a></li>
-              <li><a href="https://instagram.com/{{site.instagram}}" class="icon fa-instagram" rel="nofollow"><span class="label">Instagram</span></a></li>
-              <li><a href="https://github.com/{{site.github}}" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+				<nav id="nav">
+					{% include nav.html %}
+					<ul class="icons">
+						<li><a href="https://twitter.com/{{site.twitter}}" class="icon fa-twitter" rel="nofollow"><span class="label">Twitter</span></a></li>
+						<li><a href="https://facebook.com/{{site.facebook}}" class="icon fa-facebook" rel="nofollow"><span class="label">Facebook</span></a></li>
+						<li><a href="https://instagram.com/{{site.instagram}}" class="icon fa-instagram" rel="nofollow"><span class="label">Instagram</span></a></li>
+						<li><a href="https://github.com/{{site.github}}" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
+					</ul>
+				</nav>
 
 				<!-- Main -->
-					<div id="main">
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2>Invest in your Dreams</h2>
-									<p><b>Investing Knights</b>, a single source of all the information <b>that you need</b> on personal finance.</p>
+				<div id="main">
+					<!-- Featured Post -->
+					<article class="post featured">
+						<header class="major">
+							<h2>Invest in your Dreams</h2>
+							<p><b>Investing Knights</b>, a single source of all the information <b>that you need</b> on personal finance.</p>
+						</header>
+						<!--<a href="#" class="image main"><img src="{{ "/images/pic01.jpg" | absolute_url }}" alt="" /></a>-->
+						<p>Though we all know that there are no shortcuts to success but let me tell you, there are hell lot of ways to generate wealth that will last your lifetime. Let people be the judge to compare wealth and success <b>while you unceasingly earn money</b>.</p>
+						<p>Going to school, getting college degrees and then getting a job is the way we have been living and believe me, after what I show you, it’ll get a lot boring (it did get for me, hence this blog).</p>
+						<p>That said, we all need a start.</p>
+						<p>A start to end all your financial anguish.</p>
+						<p><b>Ladies and gentlemen, I welcome you to the world of Investing.</b></p>
+						<a href="#" class="image main"><img src="{{ "/images/main_image.png" | absolute_url }}" alt="" /></a>
+						<p>All you need is a little observant and analytical mind.</p>
+						<p>Believe me, <b>that’s enough</b>.</p>
+					</article>
+
+					<!-- Posts -->
+					<section class="posts">
+						{% for post in site.posts limit:3 %}
+							{% assign mod3 = forloop.index | modulo: 3 %}
+							<article>
+								<header>
+									<span class="date">{{ post.date | date_to_string }}</span>
+									<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</h2>
 								</header>
-								<!--<a href="#" class="image main"><img src="{{ "/images/pic01.jpg" | absolute_url }}" alt="" /></a>-->
-                <p>Though we all know that there are no shortcuts to success but let me tell you, there are hell lot of ways to generate wealth that will last your lifetime. Let people be the judge to compare wealth and success <b>while you unceasingly earn money</b>.</p>
-                <p>Going to school, getting college degrees and then getting a job is the way we have been living and believe me, after what I show you, it’ll get a lot boring (it did get for me, hence this blog).</p>
-								<p>That said, we all need a start.</p>
-								<p>A start to end all your financial anguish.</p>
-								<p><b>Ladies and gentlemen, I welcome you to the world of Investing.</b></p>
-								<a href="#" class="image main"><img src="{{ "/images/main_image.png" | absolute_url }}" alt="" /></a>
-								<p>All you need is a little observant and analytical mind.</p>
-								<p>Believe me, <b>that’s enough</b>.</p>
+								<a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
+								<p>{{ post.excerpt }}</p>
+								<ul class="actions">
+									<li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>
+								</ul>
+							</article>
+							{% if mod3 == 0 %}
+							<article>
+								<header>
+									<h2><a href="#">Sponsored</h2>
+								</header>
 
 							</article>
-
-						<!-- Posts -->
-							<section class="posts">
-                {% for post in site.posts limit:3 %}
-                {% assign mod3 = forloop.index | modulo: 3 %}
-  								<article>
-  									<header>
-  										<span class="date">{{ post.date | date_to_string }}</span>
-  										<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</h2>
-  									</header>
-  									<a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
-  									<p>{{ post.excerpt }}</p>
-  									<ul class="actions">
-  										<li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>
-  									</ul>
-  								</article>
-                  {% if mod3 == 0 %}
-                  <article>
-  									<header>
-  										<h2><a href="#">Sponsored</h2>
-  									</header>
-
-  								</article>
-                  {% endif %}
-                {% endfor %}
-
-							</section>
-
-					</div>
+							{% endif %}
+						{% endfor %}
+					</section>
+				</div>
 
 				<!-- Footer -->
-        {% include foot.html %}
+        		{% include foot.html %}
 
 			</div>
 
 		<!-- Scripts -->
 		{% include scripts-main.html %}
-    {% include tracking.html %}
+    	{% include tracking.html %}
 
 	</body>
 </html>
